@@ -1,25 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System;
 
 //Basic control statements in c-sharp
-
 namespace Control_Statements
 {
-    class Program
+    internal static class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             Console.WriteLine("Enter a number:");
-            int var = Convert.ToInt32(Console.ReadLine());
+            var number = Convert.ToInt32(Console.ReadLine());
 
-            if (var == 10)
+            if (number == 10)
             {
                 Console.WriteLine("Your Number is 10");
             }
-            else if (var == 5)
+            else if (number == 5)
             {
                 Console.WriteLine("Your Number is 5");
             }
@@ -28,27 +23,29 @@ namespace Control_Statements
                 Console.WriteLine("I dont know");
             }
 
-            switch (var)
+            switch (number)
             {
                 case 5: Console.WriteLine("It is 5"); break;
                 case 10: Console.WriteLine("It is 10"); break;
                 default: Console.WriteLine("Not 5 or 10"); break;
             }
 
-            for (int j = 1; j <= 10; j++)
+            for (var j = 1; j <= 10; j++)
             {
                 if (j == 3)
                 {
                     continue;
                 }
+                
                 Console.WriteLine(j);
             }
 
-            while (var >= 0)
+            while (number >= 0)
             {
                 Console.WriteLine("Not yet");
-                var--;
+                number--;
             }
+            
             Console.WriteLine("Press Any Key to Exit");
             Console.ReadKey();
         }
